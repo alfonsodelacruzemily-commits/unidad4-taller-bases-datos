@@ -52,6 +52,16 @@
     a:focus-visible,button:focus-visible{outline:3px solid var(--turquesa);outline-offset:3px;border-radius:.6rem}
     .saltar{position:absolute;left:-999px;top:.5rem}.saltar:focus{left:.5rem;z-index:100;background:#fff;padding:.5rem 1rem;border-radius:.5rem}
     .revelar{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.revelar.visible{opacity:1;transform:none}
+
+    /* Datos institucionales y autores */
+    .autores-card{background:rgba(255,255,255,.78);border:1px solid var(--borde);box-shadow:0 10px 30px -12px rgba(34,52,90,.14);border-radius:1.25rem}
+    .autor-item{background:rgba(243,246,251,.82);border:1px solid rgba(74,108,247,.12);border-radius:1rem;padding:1rem;min-width:0}
+    .autor-item a{overflow-wrap:anywhere}
+    .institucion-cabecera{display:flex;align-items:center;justify-content:center;gap:1.25rem;text-align:left}
+    .institucion-logo{width:6.5rem;height:7.5rem;object-fit:contain;background:#fff;border-radius:.9rem;padding:.35rem;border:1px solid var(--borde);box-shadow:0 6px 18px -10px rgba(34,52,90,.25)}
+    .institucion-link{color:var(--pizarra-1);text-decoration:none;transition:color .2s ease}
+    .institucion-link:hover{color:var(--acento);text-decoration:underline}
+    @media(max-width:480px){.institucion-cabecera{gap:.8rem}.institucion-logo{width:5rem;height:6rem}.institucion-cabecera h2{font-size:1.05rem}}
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}.revelar{opacity:1;transform:none}}
   </style>
 </head>
@@ -332,7 +342,64 @@ T2:             R(A)  W(A)                    COMMIT</pre></article>
       </div>
     </section>
 
-    <!-- 6. CRÉDITOS DE IMÁGENES -->
+
+    <!-- 6. DATOS INSTITUCIONALES Y AUTORES -->
+    <section id="autores" class="bg-white py-16 lg:py-20">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6">
+        <div class="autores-card p-6 sm:p-8 revelar">
+          <div class="institucion-cabecera">
+            <a href="https://villahermosa.tecnm.mx/" target="_blank" rel="noopener noreferrer" aria-label="Visitar el sitio oficial del Instituto Tecnológico de Villahermosa">
+              <img
+                class="institucion-logo"
+                src="https://blog-itvh.onrender.com/imgs/ITVH.jpg"
+                alt="Logotipo del Instituto Tecnológico de Villahermosa"
+                loading="lazy"
+              />
+            </a>
+            <div>
+              <span class="chip"><i data-lucide="graduation-cap" class="w-4 h-4"></i> Institución educativa</span>
+              <h2 class="mt-3 text-xl sm:text-2xl font-bold">
+                <a class="institucion-link" href="https://villahermosa.tecnm.mx/" target="_blank" rel="noopener noreferrer">
+                  Instituto Tecnológico de Villahermosa
+                </a>
+              </h2>
+              <p class="mt-2 text-sm text-slate-600">Unidad 4 · Concurrencia en Bases de Datos</p>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <h3 class="text-lg font-semibold text-marino flex items-center gap-2">
+              <span class="icono"><i data-lucide="users"></i></span>
+              Autores
+            </h3>
+            <div class="mt-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              <article class="autor-item">
+                <p class="font-semibold text-sm">Alfonso De La Cruz Emily</p>
+                <a class="mt-2 block text-sm text-acento hover:underline" href="mailto:L24300690@villahermosa.tecnm.mx">L24300690@villahermosa.tecnm.mx</a>
+              </article>
+              <article class="autor-item">
+                <p class="font-semibold text-sm">Almeida Sánchez Jesús Alejandro</p>
+                <a class="mt-2 block text-sm text-acento hover:underline" href="mailto:L24300692@villahermosa.tecnm.mx">L24300692@villahermosa.tecnm.mx</a>
+              </article>
+              <article class="autor-item">
+                <p class="font-semibold text-sm">Pérez Metelin Estrella</p>
+                <a class="mt-2 block text-sm text-acento hover:underline" href="mailto:L24300816@villahermosa.tecnm.mx">L24300816@villahermosa.tecnm.mx</a>
+              </article>
+              <article class="autor-item">
+                <p class="font-semibold text-sm">García Rubalcabar José De Jesús</p>
+                <a class="mt-2 block text-sm text-acento hover:underline" href="mailto:l24300746@villahermosa.tecnm.mx">l24300746@villahermosa.tecnm.mx</a>
+              </article>
+              <article class="autor-item">
+                <p class="font-semibold text-sm">Bocanegra García Héctor Manuel</p>
+                <a class="mt-2 block text-sm text-acento hover:underline" href="mailto:L24300705@villahermosa.tecnm.mx">L24300705@villahermosa.tecnm.mx</a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CRÉDITOS DE IMÁGENES -->
     <section id="creditos" class="creditos bg-hielo py-16">
       <div class="max-w-4xl mx-auto px-4 sm:px-6">
         <h2 class="text-2xl font-bold">Créditos de imágenes</h2>
